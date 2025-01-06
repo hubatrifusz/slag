@@ -1,0 +1,35 @@
+<div id="container">
+  <h2>Slagok</h2>
+
+  <table class="table">
+    <thead>
+      <tr class="table-secondary">
+        <th scope="col">Név</th>
+        <th scope="col">Hossz</th>
+        <th scope="col">Anyaga</th>
+        <th scope="col">Nyomásbírás</th>
+        <th scope="col">Csatlakozó méret</th>
+        <th>Ár</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (slag of slagok; track $index) {
+      <tr>
+        <td>{{ slag.nev }}</td>
+        <td>{{ slag.hossz }}</td>
+        <td>{{ slag.anyaga }}</td>
+        <td>{{ slag.nyomasallo }}</td>
+        <td>{{ slag.csatlakozo_meret }}</td>
+        <td>{{ slag.ar }} HUF</td>
+        <td ><img src="more.png" alt="" class="optionsButton opt" (click)="showOptions($event)"></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+
+  <div id="options" class="opt">
+    <div id="edit">Módosítás</div>
+    <div id="delete">Törlés</div>
+  </div>
+</div>

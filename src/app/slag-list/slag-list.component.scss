@@ -1,0 +1,57 @@
+#container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    padding: 1rem;
+  }
+
+  table {
+    width: 90%;
+    margin-top: 2rem;
+
+    tbody {
+      tr {
+        td {
+          img {
+            height: 1rem;
+            opacity: 0;
+            cursor: auto;
+          }
+        }
+      }
+
+      tr:hover {
+        td {
+          img {
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  #options {
+    width: 13%;
+    position: fixed;
+    display: none;
+    overflow: hidden;
+
+    border-radius: 10px;
+    border: solid 1px #ddd;
+    background-color: #eee;
+
+    div {
+      padding: 0.5rem;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    div:hover {
+      background-color: #0000002c;
+    }
+  }
+}
