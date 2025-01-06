@@ -1,0 +1,74 @@
+<div class="details_container">
+  <div class="form_container">
+    <h3 id="title">✨ Slag ✨</h3>
+    <form [formGroup]="slagForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="nev">Name:</label>
+        <input id="nev" formControlName="nev" type="text" />
+        @if (slagForm.get('nev')?.invalid && slagForm.get('nev')?.touched) {
+        <div class="error">This field is required.</div>
+        }
+      </div>
+
+      <div>
+        <label for="hossz">Length:</label>
+        <input id="hossz" formControlName="hossz" type="text" />
+        @if (slagForm.get('hossz')?.invalid && slagForm.get('hossz')?.touched) {
+        <div class="error">This field is required.</div>
+        }
+      </div>
+
+      <div>
+        <label for="anyaga">Material:</label>
+        <input id="anyaga" formControlName="anyaga" type="text" />
+        @if (slagForm.get('anyaga')?.invalid && slagForm.get('anyaga')?.touched)
+        {
+        <div class="error">This field is required.</div>
+        }
+      </div>
+
+      <div>
+        <label for="nyomasallo">Max pressure:</label>
+        <input id="nyomasallo" formControlName="nyomasallo" type="text" />
+        @if ( slagForm.get('nyomasallo')?.invalid &&
+        slagForm.get('nyomasallo')?.touched) {
+        <div class="error">This field is required.</div>
+        }
+      </div>
+
+      <div>
+        <label for="csatlakozo_meret">Connector size:</label>
+        <input
+          id="csatlakozo_meret"
+          formControlName="csatlakozo_meret"
+          type="text"
+        />
+        @if ( slagForm.get('csatlakozo_meret')?.invalid &&
+        slagForm.get('csatlakozo_meret')?.touched) {
+        <div class="error">This field is required.</div>
+        }
+      </div>
+
+      <div>
+        <label for="price">Price (HUF):</label>
+        <input id="price" formControlName="ar" type="number" />
+        @if (slagForm.get('price')?.invalid && slagForm.get('price')?.touched) {
+        <div class="error">Valid price is required.</div>
+        }
+      </div>
+
+      <div>
+        <label for="">Image URL:</label>
+        <input id="image" formControlName="kep" type="text" />
+        @if (slagForm.get('image')?.invalid && slagForm.get('image')?.touched) {
+        <div class="error">This field is required.</div>
+        }
+      </div>
+
+      <div class="actions">
+        <button type="submit" [disabled]="slagForm.invalid">Add / Edit</button>
+        <button type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

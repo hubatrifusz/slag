@@ -1,37 +1,17 @@
 {
   "slagok": [
     {
-      "id": 1,
-      "nev": "Kerti slag",
-      "hossz": "20 m",
-      "anyaga": "PVC",
-      "nyomasallo": "10 bar",
-      "csatlakozo_meret": "1/2 col",
-      "ar": 3990,
-      "kep": "https://example.com/images/kerti_slag.jpg"
-    },
-    {
-      "id": 2,
-      "nev": "Prémium kerti slag",
-      "hossz": "30 m",
-      "anyaga": "Erősített PVC",
-      "nyomasallo": "15 bar",
-      "csatlakozo_meret": "3/4 col",
-      "ar": 8990,
-      "kep": "https://example.com/images/premium_kerti_slag.jpg"
-    },
-    {
-      "id": 3,
       "nev": "Tűzoltó slag",
       "hossz": "50 m",
       "anyaga": "Szövetbetétes gumi",
       "nyomasallo": "20 bar",
       "csatlakozo_meret": "1 col",
       "ar": 19990,
-      "kep": "https://example.com/images/tuzolto_slag.jpg"
+      "kep": "https://example.com/images/tuzolto_slag.jpg",
+      "id": "3"
     },
     {
-      "id": 4,
+      "id": "4",
       "nev": "Csepegtető slag",
       "hossz": "10 m",
       "anyaga": "Rugalmas műanyag",
@@ -41,14 +21,54 @@
       "kep": "https://example.com/images/csepegteto_slag.jpg"
     },
     {
-      "id": 5,
       "nev": "Összecsukható slag",
-      "hossz": "15 m",
+      "hossz": "152 m",
       "anyaga": "Szövetburkolatú rugalmas gumi",
       "nyomasallo": "8 bar",
       "csatlakozo_meret": "1/2 col",
       "ar": 5490,
-      "kep": "https://example.com/images/osszecsukhato_slag.jpg"
+      "kep": "https://example.com/images/osszecsukhato_slag.jpg",
+      "id": "5"
+    },
+    {
+      "id": "626b",
+      "nev": "slag",
+      "hossz": "asd",
+      "anyaga": "asd",
+      "nyomasallo": "asd",
+      "csatlakozo_meret": "asd",
+      "ar": 13233,
+      "kep": "asd"
+    },
+    {
+      "nev": "sadsadsa",
+      "hossz": "asdsaddassad",
+      "anyaga": "asdsaddas",
+      "nyomasallo": "asdsdaasd",
+      "csatlakozo_meret": "asdasddas",
+      "ar": 123,
+      "kep": "asd",
+      "id": "7986"
+    },
+    {
+      "id": "bef4",
+      "nev": "new",
+      "hossz": "new",
+      "anyaga": "asd",
+      "nyomasallo": "asd",
+      "csatlakozo_meret": "asd",
+      "ar": 231,
+      "kep": "das"
+    },
+    {
+      "id": "37dc",
+      "nev": "123",
+      "hossz": "213",
+      "anyaga": "123",
+      "nyomasallo": "123",
+      "csatlakozo_meret": "213",
+      "ar": 213,
+      "kep": "123"
     }
   ]
 }

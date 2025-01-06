@@ -1,1 +1,2 @@
-<app-slag-list></app-slag-list>
+<app-slag-list (slagEdit)="onSlagEdit($event)"></app-slag-list>
+<app-details (slagAdded)="onSlagAdded()" [slagToEdit]="selectedSlagToEdit"></app-details>

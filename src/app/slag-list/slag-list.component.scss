@@ -54,4 +54,25 @@
       background-color: #0000002c;
     }
   }
+
+  #addNew {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    img {
+      height: 1.5rem;
+      transition: all 0.1s ease;
+    }
+  }
+
+  #addNew:hover {
+    img {
+      height: 1.7rem;
+    }
+  }
 }

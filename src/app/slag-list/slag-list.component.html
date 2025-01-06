@@ -22,14 +22,18 @@
         <td>{{ slag.nyomasallo }}</td>
         <td>{{ slag.csatlakozo_meret }}</td>
         <td>{{ slag.ar }} HUF</td>
-        <td ><img src="more.png" alt="" class="optionsButton opt" (click)="showOptions($event)"></td>
+        <td><img src="more.png" alt="" class="optionsButton opt" (click)="showOptions($event, slag)"></td>
       </tr>
       }
     </tbody>
   </table>
 
   <div id="options" class="opt">
-    <div id="edit">Módosítás</div>
-    <div id="delete">Törlés</div>
+    <div id="edit" (click)="editSlag(selectedSlag)">Edit</div>
+    <div id="delete" (click)="deleteSlag(selectedSlag.id)">Delete</div>
+  </div>
+
+  <div id="addNew" (click)="showDetailsWindow()">
+    <img src="plus.png" alt="add">
   </div>
 </div>

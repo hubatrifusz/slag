@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { SlagService } from '../services/slag.service';
 
 @Component({
@@ -10,6 +16,9 @@ import { SlagService } from '../services/slag.service';
 })
 export class SlagListComponent implements OnInit {
   slagok: any[] = [];
+  selectedSlag: any = null;
+
+  @Output() slagEdit = new EventEmitter<any>();
 
   constructor(private slagService: SlagService) {}
 
@@ -23,13 +32,20 @@ export class SlagListComponent implements OnInit {
     });
   }
 
-  showOptions(event: MouseEvent) {
-    const element = event.target as HTMLElement;
-    const rect = element.getBoundingClientRect();
-    const x = rect.left - 110;
-    const y = rect.top + 10;
+  refreshTable(): void {
+    this.loadSlagok();
+  }
+
+  showOptions(event: MouseEvent, slag: any): void {
+    event.stopPropagation();
+    this.selectedSlag = slag;
 
     const optionsDiv = document.getElementById('options') as HTMLElement;
+
+    const element = event.target as HTMLElement;
+    const rect = element.getBoundingClientRect();
+    const x = rect.left - 150;
+    const y = rect.top + 10;
 
     optionsDiv.style.top = y + 'px';
     optionsDiv.style.left = x + 'px';
@@ -45,5 +61,30 @@ export class SlagListComponent implements OnInit {
     if (!target.classList.contains('opt')) {
       optionsDiv.style.display = 'none';
     }
+  }
+
+  editSlag(slag: any): void {
+    this.selectedSlag = slag;
+    this.slagEdit.emit(this.selectedSlag);
+    const container = document.querySelector(
+      '.details_container'
+    ) as HTMLElement;
+    container.style.display = 'flex';
+  }
+
+  deleteSlag(id: number): void {
+    if (confirm('Are you sure you want to delete this item?')) {
+      this.slagService.deleteSlag(id).subscribe(() => {
+        this.loadSlagok();
+        this.selectedSlag = null;
+      });
+    }
+  }
+
+  showDetailsWindow() {
+    const detailsWindow = document.querySelector(
+      '.details_container'
+    ) as HTMLElement;
+    detailsWindow.style.display = 'flex';
   }
 }
